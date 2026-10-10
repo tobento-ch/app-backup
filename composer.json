@@ -1,0 +1,73 @@
+{
+    "name": "tobento/app-backup",
+    "version": "2.0",
+    "type": "library",
+    "description": "A flexible backup and restore system with a web interface for Tobento applications.",
+    "keywords": [
+        "tobento",
+        "package",
+        "app",
+        "backup",
+        "ui"
+	],
+    "homepage": "https://www.tobento.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Strub",
+            "email": "info@tobento.ch",
+            "homepage": "https://www.tobento.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.4",
+        "tobento/app": "^2.0",
+        "tobento/app-cache": "^2.0",
+        "tobento/app-card": "^2.0",
+        "tobento/app-crud": "^2.0",
+        "tobento/app-database": "^2.0",
+        "tobento/app-encryption": "^2.0",
+        "tobento/app-http": "^2.0",
+        "tobento/app-migration": "^2.0",
+        "tobento/app-notifier": "^2.0",
+        "tobento/app-language": "^2.0",
+        "tobento/app-logging": "^2.0",
+        "tobento/app-queue": "^2.0",
+        "tobento/app-translation": "^2.0",
+        "tobento/app-user": "^2.0",
+        "tobento/app-view": "^2.0",
+        "tobento/apps": "^2.0",
+        "tobento/service-collection": "^2.0",
+        "tobento/service-file-creator": "^2.0",
+        "tobento/service-iterable": "^2.0",
+        "tobento/service-repository": "^2.0",
+        "tobento/service-repository-storage": "^2.0",
+        "league/mime-type-detection": "^1.16"
+    },  
+    "require-dev": {
+        "phpunit/phpunit": "^12.3",
+        "vimeo/psalm": "^6.13",
+        "tobento/app-job": "^2.0",
+        "tobento/app-task": "^2.0",
+        "tobento/app-user-web": "^2.0",
+        "tobento/app-testing": "^2.0",
+        "nyholm/psr7": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tobento\\App\\Backup\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tobento\\App\\Backup\\Test\\": "tests",
+            "Tobento\\Service\\Console\\Test\\": "vendor/tobento/service-console/tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --colors=always",
+        "psalm": "vendor/bin/psalm"
+    }
+}

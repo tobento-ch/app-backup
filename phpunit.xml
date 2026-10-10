@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="vendor/autoload.php"
+         failOnRisky="true"
+         failOnWarning="true"
+         failOnDeprecation="true"
+         stopOnFailure="false"
+>
+    <testsuites>
+        <testsuite name="App Backup tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <ini name="display_errors" value="1"/>
+        <ini name="error_reporting" value="-1"/>
+        
+        <env name="TEST_TOBENTO_BACKUP_MYSQL" value="true" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_DSN" value="mysql:host=localhost;dbname=tobento_backup_test" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_NAME" value="tobento_database_test" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_HOST" value="127.0.0.1" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_USER" value="root" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_PASSWORD" value="" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_PORT" value="3306" />
+        <env name="TEST_TOBENTO_BACKUP_MYSQL_SOCKET" value="" />
+    </php>
+</phpunit>
